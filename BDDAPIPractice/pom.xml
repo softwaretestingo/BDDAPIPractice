@@ -12,6 +12,11 @@
 			<version>5.4.0</version>
 		</dependency>
 		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.17.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.9.0</version>
@@ -53,7 +58,6 @@
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>
@@ -67,14 +71,11 @@
 					</execution>
 				</executions>
 			</plugin>
-
 		</plugins>
 		<resources>
 			<resource>
 				<directory>src\main\resources</directory>
 			</resource>
 		</resources>
-
 	</build>
-
 </project>
