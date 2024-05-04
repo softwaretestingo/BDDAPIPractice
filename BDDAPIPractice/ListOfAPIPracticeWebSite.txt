@@ -1,0 +1,11 @@
+1. RestFul API: https://restful-api.dev/
+2. HTTPBin: https://httpbin.org/
+3. GoRest: https://gorest.co.in/
+4. ReqRes: https://reqres.in/
+5. Postman: https://postman-echo.com
+6. For API Key Authorization: https://www.weatherapi.com/
+7. Heroku App :https://the-internet.herokuapp.com/
+8. FakeStore API: https://fakestoreapi.com/
+9. Fakestore API: https://fakestoreapi.in/
+10. Books API: https://simple-books-api.glitch.me
+11. Ergast : http://ergast.com/api/f1/2018/circuits.json
