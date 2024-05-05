@@ -17,11 +17,10 @@ public class GetRequest
 	public void getRequestTest()
 	{
 		RestAssured.baseURI="https://reqres.in/";
-		RestAssured.basePath="/api/users";
 		
 		Response response=	given().
 								when().
-									get();
+									get("/api/users");
 		
 		System.out.println("The Response Body Is: ");
 		System.out.println(response.asPrettyString());			
