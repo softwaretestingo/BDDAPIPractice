@@ -1,9 +1,9 @@
-package com.softwaretestingo.differentoperations;
+package com.softwaretestingo.log;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.*;
-public class PrintBodyLog 
+public class LogBody 
 {
 	@Test
 	public void validateResponseTest()

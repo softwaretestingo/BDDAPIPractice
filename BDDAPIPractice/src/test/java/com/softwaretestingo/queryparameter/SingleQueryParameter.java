@@ -15,7 +15,6 @@ public class SingleQueryParameter
 									.when()
 										.get("/api/users");
 		
-		System.out.println(response.asPrettyString());
-				
+		System.out.println(response.asPrettyString());		
 	}
 }
