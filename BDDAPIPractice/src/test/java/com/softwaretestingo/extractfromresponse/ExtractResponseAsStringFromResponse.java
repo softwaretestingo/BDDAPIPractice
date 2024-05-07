@@ -1,16 +1,12 @@
 package com.softwaretestingo.extractfromresponse;
 import static io.restassured.RestAssured.given;
-
 import java.util.HashMap;
 import java.util.Map;
-
 import org.testng.annotations.Test;
-
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-public class ExtractResponse 
+public class ExtractResponseAsStringFromResponse 
 {
 	@Test
 	public void ExtractResponseTest()
@@ -20,13 +16,17 @@ public class ExtractResponse
 	payload.put("name", "morpheus");
 	payload.put("job", "leader");
 	
-	ResponseBody response= given().log().all()
-			.contentType("application/json")
-				.body(payload)
-					.post("/api/users")
-						.then().log().body()
-							.contentType(ContentType.JSON)
-								.extract()
-									.response();
+	String response= given()
+							.contentType("application/json")
+								.body(payload)
+									.post("/api/users")
+										.then()
+											.contentType(ContentType.JSON)
+												.extract()
+													.response()
+														.asString();
+														//.asPrettyString(); If You Want to Pretty Format
+	
+	System.out.println(response);
 	}
 }

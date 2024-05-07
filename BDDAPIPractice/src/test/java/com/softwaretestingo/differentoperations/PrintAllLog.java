@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import static io.restassured.RestAssured.*;
-public class CaptureAllLog 
+public class PrintAllLog 
 {
 	@Test
 	public void validateResponseTest()
