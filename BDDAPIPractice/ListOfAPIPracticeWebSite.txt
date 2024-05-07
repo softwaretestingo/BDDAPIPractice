@@ -10,3 +10,4 @@
 10. Books API: https://simple-books-api.glitch.me
 11. Ergast : http://ergast.com/api/f1/2018/circuits.json
 12. RestFul: https://restful-booker.herokuapp.com/
+13. RestAPI Example : https://dummy.restapiexample.com/
