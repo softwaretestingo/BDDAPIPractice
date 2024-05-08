@@ -1,8 +1,6 @@
 package com.softwaretestingo.e2escenarios;
 import org.testng.annotations.Test;
-
-import com.softwaretestingo.matchers.numberassertions.EqualToExample;
-
+import static org.hamcrest.MatcherAssert.assertThat;
 import files.Payload;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -21,25 +19,26 @@ public class ReqresE2EScenario
 	 */
 	
 	int userId;
-		
+	Response response, updateResponse;
+	
 	@Test (priority =0)
 	public void reqresE2EScenarioTest()
 	{
 		RestAssured.baseURI="https://reqres.in/";
 		
 		//Add a User & Get The Response
-		Response response = given()
-								.contentType("application/json")
-									.body(Payload.payloadForAddingReqresUser())
-										.when()
-											.post("/api/users")
-												.then().log().body()
-													.assertThat()
-														.statusCode(201)
-															.and()
-																.contentType(ContentType.JSON)
-																	.extract()
-																		.response();	
+		response = given()
+						.contentType("application/json")
+							.body(Payload.payloadForAddingReqresUser())
+								.when()
+									.post("/api/users")
+										.then().log().body()
+											.assertThat()
+												.statusCode(201)
+													.and()
+														.contentType(ContentType.JSON)
+															.extract()
+																.response();	
 					
 		//Extract the UserID from the response
 		JsonPath pathview = response.jsonPath();
@@ -52,25 +51,35 @@ public class ReqresE2EScenario
 	{
 		RestAssured.baseURI="https://reqres.in/";
 		
-		Response response= given()
-								.contentType("application/json")
-									.body(Payload.payloadforUpdateReqresUser())
-										.pathParam("id", userId)
-											.when()
-												.put("/api/users/{id}")
-													.then()
-														.assertThat()
-															.statusCode(200)
-																.and()
-																	.contentType(ContentType.JSON)
-																		.and()
-																			.body("name", equalTo("SoftwareTestingo Blog"))
-																				.extract()
-																					.response();
+		updateResponse= given()
+					.contentType("application/json")
+						.body(Payload.payloadforUpdateReqresUser())
+							.pathParam("id", userId)
+								.when()
+									.put("/api/users/{id}")
+										.then()
+											.assertThat()
+												.statusCode(200)
+													.and()
+														.contentType(ContentType.JSON)
+															.and()
+																.body("name", equalTo("SoftwareTestingo Blog"))
+																	.extract()
+																		.response();
 		
 		
 		System.out.println("After Update the Response Bpody");
-		System.out.println(response.asPrettyString());
+		System.out.println(updateResponse.asPrettyString());
 	}
+	
+	@Test(priority = 2)
+	public void validateName()
+	{
+		String name;
 		
+		JsonPath js=updateResponse.jsonPath();
+		name=js.getString("name");
+		System.out.println(name);
+		assertThat(name, equalTo("SoftwareTestingo Blog"));
+	}
 }
