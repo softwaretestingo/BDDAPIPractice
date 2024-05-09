@@ -17,7 +17,7 @@ public class SinglePathParameter
 										.get("/api/f1/{year}/circuits.json");
 							
 		System.out.println(response.asPrettyString());
-		//test ABC
-		//test def
+		//test abc
+		System.out.println(response.asPrettyString());
 	}
 }
