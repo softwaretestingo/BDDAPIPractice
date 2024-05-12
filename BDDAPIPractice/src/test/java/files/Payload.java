@@ -1,5 +1,7 @@
 package files;
 
+import utils.ReusableMethods;
+
 public class Payload 
 {
 	public static String payloadForAddingItems()
@@ -56,5 +58,39 @@ public class Payload
 				+ "    }\r\n"
 				+ "  ]\r\n"
 				+ "}";
+	}
+	
+	public static String payloadForAddingGoRESTUser()
+	{
+		String payload= "{\r\n"
+				+ "\"email\": \"testab0585@gmail.com\",\r\n"
+				+ "\"name\": \"softwaretestingo\",\r\n"
+				+ "\"gender\": \"Male\",\r\n"
+				+ "\"status\": \"Active\"\r\n"
+				+ "}";
+		return payload;
+	}
+	
+	public static String payloadForAddingGoRESTUser(String email)
+	{
+		String payload= "{\r\n"
+				+ "\"email\": \""+email+"\",\r\n"
+				+ "\"name\": \"softwaretestingo\",\r\n"
+				+ "\"gender\": \"Male\",\r\n"
+				+ "\"status\": \"Active\"\r\n"
+				+ "}";
+		return payload;
+	}
+	
+	public static String payloadForAddingRandomEmailInGoRESTUser()
+	{
+		String email="SoftwareTestingo"+ReusableMethods.getRandomNumber(1, 10000)+"@test.com";
+		String payload= "{\r\n"
+				+ "\"email\": \""+email+"\",\r\n"
+				+ "\"name\": \"softwaretestingo\",\r\n"
+				+ "\"gender\": \"Male\",\r\n"
+				+ "\"status\": \"Active\"\r\n"
+				+ "}";
+		return payload;
 	}
 }

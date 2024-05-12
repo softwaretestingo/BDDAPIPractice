@@ -1,0 +1,6 @@
+1. AddUserWithGoRestAPI - In This example we are getting the static payload for creating the user.
+2. AddUserWithParameterGoRestAPI - In this example we are passing different email id to the payload from our test method.
+3. AddUserWithDataFromDataProvider - In this example we are passing different email from a dataprovider to the payload for creating users.
+4. AddUserByRetrivingPayloadFromFile : Here The Payload We Will Retrive From External File
+5. AddUserWithRandomEmailGoRestAPI: Each Time a New Email Id is created and with that you can create random email id for payload.
+6. AddUserWithPayloadFromStaticJSONFile: How to get JSOn fropm a file instead from local code base
