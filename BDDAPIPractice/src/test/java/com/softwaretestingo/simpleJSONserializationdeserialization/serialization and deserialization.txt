@@ -1,0 +1,29 @@
+Serialization: Convert Java Object to Request Body (Payload) 
+Deserialization: Converting Response Body to Java Object
+
+Serialization
+-------------------
+{
+"message":"Softwaretestingo";
+}
+
+If you want to pass this JSON then we can do this by:
+
+1. We Can send directly by Providing special character in string
+2. JSON Using HashMap
+3. Send JSON From any external file
+4. By Creating Java Object Out Of it(POJO - Plain Object Java Classes)
+
+POJO Classes
+----------------
+{
+    "name": "Softwaretestingo",
+    "job": "Admin"
+}
+
+In the above JSON name and job is Key and Softwaretestingo & Admin is Value.
+So For Each Key create a Variable. And for that variable Create two methods which is getter and setter
+
+ 
+
+
