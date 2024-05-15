@@ -1,0 +1,26 @@
+Complex JSON
+-------------------
+{
+    "bookingid": 2355,
+    "booking": 
+    {
+        "firstname": "Jim",
+        "lastname": "Brown",
+        "totalprice": 111,
+        "depositpaid": true,
+        "bookingdates": 
+        	{
+            	"checkin": "2018-01-01",
+            	"checkout": "2019-01-01"
+        	},
+        "additionalneeds": "Breakfast"
+    }
+}
+
+Lets Create POJO Class For the above JSON.
+For Each Key Lets Create Private Variables.
+Under booking we have nested JSONS So for those nested JSON Create a Separate Class on that name.
+Now after create the pojo class for nested JSON you need to inject in the main JSON, for that goto your main JSON and you need to update 
+that the return type for booking is not String. Its return type is class of "BookingPOJOClass". So update the same in the main JSON. in the same way solve the issues of getter and setter method.
+In this way you can create the POJO Classes for your JSON.
+ 
