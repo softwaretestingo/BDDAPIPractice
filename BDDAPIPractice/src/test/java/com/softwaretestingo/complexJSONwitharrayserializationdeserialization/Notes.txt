@@ -1,0 +1,68 @@
+In This Example we will try to understand how to deal with JSON when there are array of Objects.
+
+End Point URL: https://fakestoreapi.in/api/users?limit=2
+
+We Will Get this Resposne:
+
+{
+    "status": "SUCCESS",
+    "message": "Here you go! You've received 2\n        users.",
+    "users": [
+        {
+            "id": 1,
+            "email": "michael@simpson.com",
+            "username": "michaelsimpson",
+            "password": "@K(5UejhL&",
+            "name": {
+                "firstname": "Michael",
+                "lastname": "Simpson"
+            },
+            "address": {
+                "city": "Joelton",
+                "street": "Angela Spring",
+                "number": "868",
+                "zipcode": "75070",
+                "geolocation": {
+                    "lat": 19.7091875,
+                    "long": -14.782061
+                }
+            },
+            "phone": "562.548.9768x73853"
+        },
+        {
+            "id": 2,
+            "email": "april@boyd.com",
+            "username": "aprilboyd",
+            "password": "k8WR_hX0+m",
+            "name": {
+                "firstname": "April",
+                "lastname": "Boyd"
+            },
+            "address": {
+                "city": "Ericchester",
+                "street": "Johnson Mountains",
+                "number": "5522",
+                "zipcode": "87835",
+                "geolocation": {
+                    "lat": 39.2711365,
+                    "long": -56.601702
+                }
+            },
+            "phone": "9329508218"
+        }
+    ]
+}
+
+For This Response We will Create the POJO Claass, if you notice in this JSON response we have 2 keys (status & message) and one array (user).
+
+So
+
+a. We will create private variables for the keys
+b. For the User array we need to create separate pojo class and similarly for the nested json we will create separate pojo class
+   
+
+Problem Statement:
+
+1.  Perform the Get Operation To Retrive The List Of 20 User Data
+2.  Deserialize and Store the Response Data in the POJO Class
+3.  Print the Values
