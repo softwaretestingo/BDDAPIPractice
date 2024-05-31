@@ -1,4 +1,4 @@
-package com.softwaretestingo.complexJSONwitharrayserializationdeserialization;
+package com.softwaretestingo.complexJSONwitharrayDeserialization;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

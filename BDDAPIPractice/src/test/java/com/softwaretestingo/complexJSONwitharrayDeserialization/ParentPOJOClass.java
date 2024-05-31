@@ -1,7 +1,5 @@
-package com.softwaretestingo.complexJSONwitharrayserializationdeserialization;
-
+package com.softwaretestingo.complexJSONwitharrayDeserialization;
 import java.util.List;
-
 public class ParentPOJOClass 
 {
 	/**

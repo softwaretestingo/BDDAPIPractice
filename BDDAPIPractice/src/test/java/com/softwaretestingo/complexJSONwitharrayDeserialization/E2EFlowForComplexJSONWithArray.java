@@ -1,4 +1,4 @@
-package com.softwaretestingo.complexJSONwitharrayserializationdeserialization;
+package com.softwaretestingo.complexJSONwitharrayDeserialization;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import static io.restassured.RestAssured.*;

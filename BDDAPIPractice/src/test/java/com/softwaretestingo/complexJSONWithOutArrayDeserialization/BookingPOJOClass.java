@@ -1,4 +1,4 @@
-package com.softwaretestingo.complexJSONWithOutArrayserializationdeserialization;
+package com.softwaretestingo.complexJSONWithOutArrayDeserialization;
 
 public class BookingPOJOClass 
 {

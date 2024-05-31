@@ -1,4 +1,4 @@
-package com.softwaretestingo.complexJSONWithOutArrayserializationdeserialization;
+package com.softwaretestingo.complexJSONWithOutArrayDeserialization;
 import java.util.HashMap;
 import java.util.Map;
 import org.testng.annotations.Test;

@@ -23,4 +23,3 @@ Under booking we have nested JSONS So for those nested JSON Create a Separate Cl
 Now after create the pojo class for nested JSON you need to inject in the main JSON, for that goto your main JSON and you need to update 
 that the return type for booking is not String. Its return type is class of "BookingPOJOClass". So update the same in the main JSON. in the same way solve the issues of getter and setter method.
 In this way you can create the POJO Classes for your JSON.
- 
